@@ -1,0 +1,26 @@
+java生成API文档:
+	1.在cmd中，导到想要打包java文件的路径下
+	2.输入 javadoc -d apidoc -windowtitle 测试 -doctitle 名字 -header 标题名 -version -author *文件名字.属性
+
+
+com.team.bean
+	存放单独用户对象 例如
+			个人账号登陆类
+com.team.dao
+	存放数据导入类 例如
+			数据库的连接类 数据上传、更新类
+com.team.frame
+	存放每个窗口类
+
+com.team.others
+	暂时放些不知道的以后分类
+
+com.team.panel
+	存放每个面板类
+	
+com.team.tool
+	存放运用比较频繁的工具类 例如
+				每个用户登陆后的密码 备份和获取密码账号方法类
+
+image
+	存放图片

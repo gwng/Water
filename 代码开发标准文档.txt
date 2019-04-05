@@ -1,0 +1,21 @@
+1. 【强制】代码中的命名均不能以下划线或美元符号开始，也不能以下划线或美元符号结束。
+反例：_name / __name / $name / name_ / name$ / name__
+
+2. 【强制】代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。
+说明：正确的英文拼写和语法可以让阅读者易于理解，避免歧义。注意，即使纯拼音命名方式
+也要避免采用。
+正例：alibaba / taobao / youku / hangzhou 等国际通用的名称，可视同英文。
+反例：DaZhePromotion [打折] / getPingfenByName() [评分] / int 某变量 = 3
+
+3. 【强制】类名使用 UpperCamelCase 风格，但以下情形例外：DO / BO / DTO / VO / AO / 
+PO / UID 等。
+正例：MarcoPolo / UserDO / XmlService / TcpUdpDeal / TaPromotion
+反例：macroPolo / UserDo / XMLService / TCPUDPDeal / TAPromotion
+
+4. 【强制】方法名、参数名、成员变量、局部变量都统一使用 lowerCamelCase 风格，必须遵从
+驼峰形式。
+正例： localValue / getHttpMessage() / inputUserId
+
+5. 【强制】常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。
+正例：MAX_STOCK_COUNT
+反例：MAX_
