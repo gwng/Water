@@ -5,7 +5,7 @@
   create table person_apply                               #个人报名表
 	(id int(11) not null primary key auto_increment,        #序号
 	name varchar(15) not null,                              #姓名
-	sex enum('boy','girl'),                                 #性别 enum里面不能                                                                        是中文   
+	sex enum('boy','girl','undefined'),                                 #性别 enum里面不能                                                                        是中文   
 	stu_num varchar(15) not null,                           # 学号
 	college varchar(40),                                    #院系
 	major varchar(10),                                      #专业
@@ -16,7 +16,7 @@
   create table  manage_detail                          #管理者信息表
 	(id int(11) not null primary key auto_increment,     #自增id
 	name varchar(15) not null,                           #姓名
-	sex enum('boy','girl'),                             #性别
+	sex enum('boy','girl','undefined'),                             #性别
 	stu_num varchar(15) not null,                      #学号
 	college varchar(40),                                #院系
 	major varchar(10),                                #专业
@@ -32,7 +32,7 @@
 	acti_detail longtext not null,                          #活动内容         
 	acti_character varchar(50),                             #活动类型
 	pub_time datetime not null,                             #发布时间
-	acti_condition enum('not_push','In','out_of_date'),     #活动状态
+	acti_condition enum('not_push','In','out_of_date','undefined'),     #活动状态
 	acti_belong varchar(10),                                #组织归属
 	acti_end_time datetime,                                 #截止报名时间
 	apply_time datetime);                                   #接受报名时间                                   
@@ -58,7 +58,7 @@
   create table user_detail                                      #用户信息表
 	(id int(11) not null primary key auto_increment,        #自增id
 	name varchar(15) not null,                              #姓名
-	sex enum('boy','girl'),                                 #性别
+	sex enum('boy','girl','undefined'),                                 #性别
 	stu_num varchar(15) not null,                           #学号
 	college varchar(40),                                    #院系
 	major varchar(10),                                      #专业

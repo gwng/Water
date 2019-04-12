@@ -42,7 +42,7 @@ public class Active {
 	Scanner input=new Scanner(System.in);
 	//状态枚举
 	private static enum status{
-		Going,Stop,Cancel,undefined
+		not_push,In,out_of_date,undefined
 	};
 	//活动名
 	private static String actionName=null;
