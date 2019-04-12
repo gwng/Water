@@ -14,17 +14,17 @@ public class Message {
 	//发布组织
 	private static String organization=null;
 	//设置信息名
-	private void setMessage() {
+	public void setMessage() {
 		String s=sc.next();
 		message=s;
 	}
 	//设置通知内容
-	private void setText() {
+	public void setText() {
 		String s=sc.next();
 		text=s;
 	}
 	//设置时间
-	private void setTime() {
+	public void setTime() {
 		String s1,s2,s3,s4,s5,s6;
 		s1=sc.next();
 		s2=sc.next();
@@ -35,25 +35,25 @@ public class Message {
 		t.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	//设置发布组织
-	private void setOrganization() {
+	public void setOrganization() {
 		String s=sc.next();
 		organization=s;
 	}
 	
 	//获取信息名
-	private String getMessage() {
+	public String getMessage() {
 		return message;
 	}
 	//获取通知内容
-	private String getText() {
+	public String getText() {
 		return text;
 	}
 	//获取时间
-	private String getT() {
+	public String getT() {
 		return t.getTime();
 	}
 	//获取发布组织
-	private String getOrganization() {
+	public String getOrganization() {
 		return organization;
 	}
 }

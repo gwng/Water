@@ -62,56 +62,56 @@ public class Active {
 	private static Time beginTime=new Time();
 	
 	//获取活动名
-	private String getActionName() {
+	public String getActionName() {
 		return actionName;
 	}
 	//获取活动内容
-	private String getActionTxt() {
+	public String getActionTxt() {
 		return actionTxt;
 	}
 	//获取活动类型
-	private String getActionClass() {
+	public String getActionClass() {
 		return actionClass;
 	}
 	//获取活动发布时间
-	private String getPushTime() {
+	public String getPushTime() {
 		return pushTime.getTime();
 	}
 	//获取活动状态
-	private status getActionStatus() {
+	public status getActionStatus() {
 		return actionStatus;
 	}
 	//获取活动归属组织
-	private String getActionOrganization() {
+	public String getActionOrganization() {
 		return actionOrganization;
 	}
 	//获取活动截止时间
-	private String getStopTime() {
+	public String getStopTime() {
 		return stopTime.getTime();
 	}
 	//获取活动报名时间
-	private String getBeginTime() {
+	public String getBeginTime() {
 		return beginTime.getTime();
 	}
 	
 	
 	//设置活动名
-	private void setActionName() {
+	public void setActionName() {
 		String s=input.next();
 		actionName=s;
 	}
 	//设置活动内容
-	private void setActionTxt() {
+	public void setActionTxt() {
 		String s=input.next();
 		actionTxt=s;
 	}
 	//设置活动类型
-	private void setActionClass() {
+	public void setActionClass() {
 		String s=input.next();
 		actionClass=s;
 	}
 	//设置活动发布时间
-	private void setPushTime() {
+	public void setPushTime() {
 		String s1,s2,s3,s4,s5,s6;
 		s1=input.next();
 		s2=input.next();
@@ -124,12 +124,12 @@ public class Active {
 	//设置活动状态
 
 	//设置活动归属组织
-	private void setActionOrganization() {
+	public void setActionOrganization() {
 		String s=input.next();
 		actionOrganization=s;
 	}
 	//设置活动截止时间
-	private void setStopTime() {
+	public void setStopTime() {
 		String s1,s2,s3,s4,s5,s6;
 		s1=input.next();
 		s2=input.next();
@@ -140,7 +140,7 @@ public class Active {
 		stopTime.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	//设置活动报名时间
-	private void setBeginTime() {
+	public void setBeginTime() {
 		String s1,s2,s3,s4,s5,s6;
 		s1=input.next();
 		s2=input.next();

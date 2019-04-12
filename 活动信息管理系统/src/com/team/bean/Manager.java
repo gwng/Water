@@ -27,23 +27,23 @@ public class Manager {
 	private static String organizationName=null;
 	//管理者职位
 	private static String position =null;
-	private Manager(){
+	public Manager(){
 		
 	}
 	//设置Id方法
-	private void setId() {
+	public void setId() {
 		//输入管理者id
 		int a=sc.nextInt();
 		id=a;
 	}
 	//设置姓名方法
-	private void setManagerName() {
+	public void setManagerName() {
 		//输入字符串内容
 		String name=sc.next();
 		managerName=name;
 	}
 	//设置性别方法
-	private void setManagerSex() {
+	public void setManagerSex() {
 		int choose = 0;				
 		System.out.print("请输入序号以确定您的性别 （1.男性  2.女性） ：");
 		choose = sc.nextInt();
@@ -56,71 +56,71 @@ public class Manager {
 			setManagerSex(); }
 	}
 	//设置学号
-	private void setManasgerNo() {
+	public void setManasgerNo() {
 		String a=sc.next();
 		managerNo=a;
 	}
 	//设置院系
-	private void setCollege() {
+	public void setCollege() {
 		String s=sc.next();
 		college=s;
 	}
 	//设置班级专业
-	private void setClassName() {
+	public void setClassName() {
 		String s=sc.next();
 		className=s;
 	}
 	//设置电话
-	private void setMobilePhone() {
+	public void setMobilePhone() {
 		String a=sc.next();
 		mobilePhone=a;
 	}
 	//设置组织名
-	private void setOrganizationName() {
+	public void setOrganizationName() {
 		String s=sc.next();
 		organizationName=s;
 	}
 	//设置职业
-	private void setPosition() {
+	public void setPosition() {
 		String s=sc.next();
 		position=s;
 	}
 	
 	
 	//获取id
-	private int getId() {
+	public int getId() {
 		return id;
 	}
 	//获取学号
-	private String getManagerNo() {
+	public String getManagerNo() {
 		return managerNo;
 	}
 	//获取电话
-	private String getMobilePhone() {
+	public String getMobilePhone() {
 		return mobilePhone;
 	}
 	//获取姓名
-	private String getManagerName() {
+	public String getManagerName() {
 		return managerName;
 	}
 	//获取院系
-	private String getCollege() {
+	public String getCollege() {
 		return college;
 	}
 	//获取班级专业
-	private String getClassName() {
+	public String getClassName() {
 		return className;
 	}
 	//获取组织名
-	private String getOrganizationName() {
+	public String getOrganizationName() {
 		return organizationName;
 	}
 	//获取职位
-	private String getPosition() {
+	public String getPosition() {
 		return position;
 	}
 	//获取性别
-	private sex getSex() {
+	public sex getSex() {
 		return managerSex;
 	}
 }

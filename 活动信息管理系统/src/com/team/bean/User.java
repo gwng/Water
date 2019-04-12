@@ -16,7 +16,7 @@ public class User {					//User类用于储存、传递、检验用户输入的数据
 		setUserPassword();
 	}
 	
-	void setUserPassword() {	//设置密码
+	public void setUserPassword() {	//设置密码
 		System.out.print("请输入用户密码：");	
 		checkPassword = input.nextLine();
 		System.out.print("请再次输入用户密码完成密码确认：");
@@ -31,11 +31,11 @@ public class User {					//User类用于储存、传递、检验用户输入的数据
 			}
 	}
 	
-	String getUserName() {	//获取用户名
+	public String getUserName() {	//获取用户名
 		return this.userName;
 	}
 	
-	String getUserPassword() {    //获取用户密码
+	public String getUserPassword() {    //获取用户密码
 		return this.userPassword;
 	}
 	
