@@ -1,0 +1,105 @@
+ SqlActive    //对应Active类，即对应活动信息表
+//创建填写活动信息表
+	public void createActiDetail(Active action) 
+//查询文本内容
+	public String selectTxt()
+//修改活动类型
+	public void changeActionClass(Active action)
+//修改组织归属
+	public void changeActionOrganization(Active action)
+//修改开始报名时间
+	public void changeBeginTime(Active action)
+//修改截止报名时间
+	public void changeStoptime(Active action)
+//修改活动状态
+	public void changeActionStatus(Active action)
+//修改活动名
+	public void changeActionName(Active action)
+//更改文本内容
+	public void changeActionTxt(Active action)
+	//查询整个活动
+	public void selectActive() 
+//删除这个活动
+	public void deleteAction()
+###############################################
+ class SqlManager   //对应Manager类，也即管理者信息表
+//创建填写管理者信息表
+	public void createManager(Manager manager) 
+//更改管理者姓名
+	public void changeManagerName(Manager manager)
+	//更改管理者性别
+	public void changeManagerSex(Manager manager)
+//更改管理者姓名
+		public void changeManagerNo(Manager manager)
+	//更改管理者院系
+		public void changecollege(Manager manager)
+	//更改管理者专业
+	public void changeclassName(Manager manager)
+	//更改管理者电话
+	public void changeMobliePhone(Manager manager)
+//更改管理组织名
+			public void changeOrganizationName(Manager manager) 
+//更改管理者职位
+			public void changePosition(Manager manager) throws SQLException {
+//查询整个管理信息表
+	public void selectManager() 
+//删除这个活动
+		public void deleteManager()
+##################################################################
+//对应Message也即对应通知信息表
+public class SqlMessage
+	//创建通知信息表
+	public void createMessage(Message message) 
+//修改信息名
+		public void changeMessageTitle(Message message)
+		//修改信息内容
+		public void changeMessageText(Message message)
+		//修改通知时间
+		public void changeMessageTime(Message message)
+	//修改发布组织
+		public void changeOrganization(Message message)
+//删除通知
+		public void deleteMessage()
+#############################################################
+//对应组织信息表即对应Organization
+public class SqlOrganization 
+		//创建组织信息表
+		public void createOrganization(Organization organization)
+//修改组织名
+			public void changeOrganizationName(Organization organization) 
+	//修改组织性质
+			public void changeOrganizationProperty(Organization organization)
+//修改指导老师姓名
+			public void changeTeacherName(Organization organization)
+	//修改负责人姓名
+			public void changePrincipalName(Organization organization)
+//删除通知
+			public void deleteOrganization()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
