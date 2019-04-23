@@ -3,19 +3,19 @@ package com.team.bean;
 import java.util.Scanner;
 //团体报名表
 
-public class Team {
+public class TeamApplyTable {
 	//序号
 	private static int teamId=0;
 	//队长姓名
 	private static String teamerName=null;
 	//队长联系方式
-	private static String teamTel=null;
+	private static int teamTel=0;
 	//队伍名称
 	private static String teamName=null;
 	//队伍人数
-	private static int teamNum;
+	private static int teamNum=0;
 	//队长学号
-	private static String teamNo=null;
+	private static int teamNo=0;
 	//队员名字
 	private static String teamText=null;
 	
@@ -28,7 +28,7 @@ public class Team {
 	}
 	//设置队长联系方式
 	public void setTeamTel() {
-		String i=sc.nextLine();
+		int i=sc.nextInt();
 		teamTel=i;
 	}
 	//设置队伍人数
@@ -38,7 +38,7 @@ public class Team {
 	}
 	//设置队长学号
 	public void setTeamNo() {
-		String i=sc.nextLine();
+		int i=sc.nextInt();
 		teamNo=i;
 	}
 	//设置队伍名称
@@ -74,11 +74,11 @@ public class Team {
 		return teamId;
 	}
 	//获取队长联系方式
-	public String getTeamTel() {
+	public int getTeamTel() {
 		return teamTel;
 	}
 	//获取队长学号
-	public String getTeamNo() {
+	public int getTeamNo() {
 		return teamNo;
 	}
 	public int getTeamNum() {

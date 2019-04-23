@@ -3,7 +3,7 @@ package com.team.bean;
 import java.util.Scanner;
 
 //通知信息表
-public class Message {
+public class InformMessageTable {
 	Scanner sc=new Scanner(System.in);
 	//信息名
 	private static String message=null;

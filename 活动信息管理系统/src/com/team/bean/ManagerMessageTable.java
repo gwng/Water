@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //管理者信息表
 
-public class Manager {
+public class ManagerMessageTable {
 	Scanner sc=new Scanner(System.in);
 	
 	//性别
@@ -13,10 +13,8 @@ public class Manager {
 	};
 	//管理者性别
 	private static sex managerSex=sex.undefined;
-	
-	private static int id=0;//管理者序号
-	private static	String	managerNo=null;//管理者学号
-	private static	String mobilePhone=null;  //管理者电话号码
+	//管理者序号、学号、电话号码
+	private static int id=0, managerNo=0 ,mobilePhone=0;
 	//管理者名字
 	private static String managerName=null;
 	//管理者院系
@@ -27,9 +25,6 @@ public class Manager {
 	private static String organizationName=null;
 	//管理者职位
 	private static String position =null;
-	public Manager(){
-		
-	}
 	//设置Id方法
 	public void setId() {
 		//输入管理者id
@@ -44,20 +39,12 @@ public class Manager {
 	}
 	//设置性别方法
 	public void setManagerSex() {
-		int choose = 0;				
-		System.out.print("请输入序号以确定您的性别 （1.男性  2.女性） ：");
-		choose = sc.nextInt();
-		if (choose == 1)
-			managerSex = sex.boy;
-		else if (choose == 2)
-			managerSex = sex.girl;
-		else {
-			System.out.println("输入错误！请按提示再次输入：");
-			setManagerSex(); }
+		sex s=(sex)sc.next();
+		managerSex=s;
 	}
 	//设置学号
 	public void setManasgerNo() {
-		String a=sc.next();
+		int a=sc.nextInt();
 		managerNo=a;
 	}
 	//设置院系
@@ -72,7 +59,7 @@ public class Manager {
 	}
 	//设置电话
 	public void setMobilePhone() {
-		String a=sc.next();
+		int a=sc.nextInt();
 		mobilePhone=a;
 	}
 	//设置组织名
@@ -92,11 +79,11 @@ public class Manager {
 		return id;
 	}
 	//获取学号
-	public String getManagerNo() {
+	public int getManagerNo() {
 		return managerNo;
 	}
 	//获取电话
-	public String getMobilePhone() {
+	public int getMobilePhone() {
 		return mobilePhone;
 	}
 	//获取姓名

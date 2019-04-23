@@ -1,48 +1,13 @@
 package com.team.bean;
 //活动信息表
 import java.util.Scanner;
-//创建时间类
-class Time{
-	//设置年月日时分秒
-	private String year;
-	private String month;
-	private String day;
-	private String dhour;
-	private String dminter;
-	private String second;
-	//初始化
-	Time(){
-		year="0000";
-		month="00";
-		day="00";
-		dhour="00";
-		dminter="00";
-		second="00";
-	}
-	//设置时间方法
-	public void setTime(String year,String month,String day,String dhour,String dminter,String dsecond) {
-		this.year=year;
-		this.month=month;
-		this.day=day;
-		this.dhour=dhour;
-		this.dminter=dminter;
-		this.second=dsecond;
-		
-	}
-	//获取时间方法
-	public String getTime() {
-		String str;
-		str=year+"-"+month+"-"+day+"-"+dhour+"-"+dminter+"-"+second;
-		return str;
-	}
-}
 
 
-public class Active {
-	Scanner input=new Scanner(System.in);
+public class ActionMessageTable {
+	Scanner sc=new Scanner(System.in);
 	//状态枚举
 	private static enum status{
-		not_push,In,out_of_date,undefined
+		not_push,in,out_of_date,undefined
 	};
 	//活动名
 	private static String actionName=null;
@@ -97,57 +62,60 @@ public class Active {
 	
 	//设置活动名
 	public void setActionName() {
-		String s=input.next();
+		String s=sc.next();
 		actionName=s;
 	}
 	//设置活动内容
 	public void setActionTxt() {
-		String s=input.next();
+		String s=sc.next();
 		actionTxt=s;
 	}
 	//设置活动类型
 	public void setActionClass() {
-		String s=input.next();
+		String s=sc.next();
 		actionClass=s;
 	}
 	//设置活动发布时间
 	public void setPushTime() {
 		String s1,s2,s3,s4,s5,s6;
-		s1=input.next();
-		s2=input.next();
-		s3=input.next();
-		s4=input.next();
-		s5=input.next();
-		s6=input.next();
+		s1=sc.next();
+		s2=sc.next();
+		s3=sc.next();
+		s4=sc.next();
+		s5=sc.next();
+		s6=sc.next();
 		pushTime.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	//设置活动状态
-
+	public void setActionStatus() {
+		String s=sc.next();
+		actionStatus=(status)s;
+	}
 	//设置活动归属组织
 	public void setActionOrganization() {
-		String s=input.next();
+		String s=sc.next();
 		actionOrganization=s;
 	}
 	//设置活动截止时间
 	public void setStopTime() {
 		String s1,s2,s3,s4,s5,s6;
-		s1=input.next();
-		s2=input.next();
-		s3=input.next();
-		s4=input.next();
-		s5=input.next();
-		s6=input.next();
+		s1=sc.next();
+		s2=sc.next();
+		s3=sc.next();
+		s4=sc.next();
+		s5=sc.next();
+		s6=sc.next();
 		stopTime.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	//设置活动报名时间
 	public void setBeginTime() {
 		String s1,s2,s3,s4,s5,s6;
-		s1=input.next();
-		s2=input.next();
-		s3=input.next();
-		s4=input.next();
-		s5=input.next();
-		s6=input.next();
+		s1=sc.next();
+		s2=sc.next();
+		s3=sc.next();
+		s4=sc.next();
+		s5=sc.next();
+		s6=sc.next();
 		beginTime.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	
