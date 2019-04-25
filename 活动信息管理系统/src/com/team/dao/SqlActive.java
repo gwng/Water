@@ -16,7 +16,7 @@ public class SqlActive {
 	static PreparedStatement pSta;//定义预编译语句
 	static ResultSet res;  //返回结果集
 	//创建填写活动信息表
-	public void createActiDetail(Active action) throws SQLException { 
+	public void createActiDetail(ActionMessageTable action) throws SQLException { 
 		System.out.println("1.请输入活动名");
 		action.setActionName();
 		//System.out.println(action.getActionName());
@@ -27,7 +27,7 @@ public class SqlActive {
 		//System.out.println("3.请输入活动发布时间");
 		//action.setPushTime();
 		System.out.println("5.请选择活动状态");
-		action.setActionStatusTest();
+		action.setActionStatus();
 		System.out.println("6.请输入组织归属");
 		action.setActionOrganization();
 		System.out.println("7.请输入报名截止时间");
@@ -45,7 +45,7 @@ public class SqlActive {
 		res.setObject(2,action.getActionTxt());
 		res.setObject(3,action.getActionClass());
 		res.setObject(4,format.format(date));
-		res.setObject(5,action.getActionStatusTest());
+		res.setObject(5,action.getActionStatus());
 		res.setObject(6,action.getActionOrganization());
 		res.setObject(7,action.getStopTime());
 		res.setObject(8,action.getBeginTime());
@@ -67,7 +67,7 @@ public class SqlActive {
 		return res.getString("actionTxt");
 	}
 	//修改活动类型
-	public void changeActionClass(Active action) throws SQLException {
+	public void changeActionClass(ActionMessageTable action) throws SQLException {
 		System.out.println("请输入你想更改的Id号");
 		String Id = n.next();
 		System.out.println("请修改你的活动类型");
@@ -80,7 +80,7 @@ public class SqlActive {
 		System.out.println("修改活动类型成功");
 	} 
 	//修改组织归属
-	public void changeActionOrganization(Active action) throws SQLException {
+	public void changeActionOrganization(ActionMessageTable action) throws SQLException {
 		System.out.println("请输入你想更改的Id号");
 		String Id = n.next();
 		System.out.println("请修改你的组织归属");
@@ -93,7 +93,7 @@ public class SqlActive {
 		System.out.println("修改组织归属成功");
 	} 
 	//修改开始报名时间
-	public void changeBeginTime(Active action) throws SQLException {
+	public void changeBeginTime(ActionMessageTable action) throws SQLException {
 			System.out.println("请输入你想更改的Id号");
 			String Id = n.next();
 			System.out.println("请修改接受报名时间");
@@ -106,7 +106,7 @@ public class SqlActive {
 			System.out.println("修改报名时间成功");
 		} 
 	//修改截止报名时间
-	public void changeStoptime(Active action) throws SQLException {
+	public void changeStoptime(ActionMessageTable action) throws SQLException {
 		System.out.println("请输入你想更改的Id号");
 		String Id = n.next();
 		System.out.println("请修改你的截止报名时间");
@@ -119,21 +119,21 @@ public class SqlActive {
 		System.out.println("修改截止报名时间成功");
 	} 
 	//修改活动状态
-	public void changeActionStatus(Active action) throws SQLException {
+	public void changeActionStatus(ActionMessageTable action) throws SQLException {
 		System.out.println("请输入你想更改的Id号");
 		String Id = n.next();
 		System.out.println("请修改你的活动状态");
-		action.setActionStatusTest();
+		action.setActionStatus();
 		sql = "update acti_detail set actionStatus =?where id = ?";
 		PreparedStatement res = connection.getconnection().prepareStatement(sql);
-		res.setObject(1, action.getActionStatusTest());
+		res.setObject(1, action.getActionStatus());
 		res.setObject(2,Id);
 		System.out.println(sql);
 		res.execute();
 		System.out.println("修改活动类型成功");
 	}
 	//修改活动名
-	public void changeActionName(Active action) throws SQLException {
+	public void changeActionName(ActionMessageTable action) throws SQLException {
 		System.out.println("请输入想更改的活动名");
 		action.setActionName();
 		System.out.println("请输入想更改的id序号");
@@ -147,7 +147,7 @@ public class SqlActive {
 		System.out.println("修改活动名成功");
 	}
 	//更改文本内容
-	public void changeActionTxt(Active action) throws SQLException{
+	public void changeActionTxt(ActionMessageTable action) throws SQLException{
 		String hadSaveTxt;  //之前保存的内容文本
 		hadSaveTxt = selectTxt();
 		System.out.println("请修改你的文本内容");
@@ -215,7 +215,7 @@ public class SqlActive {
 	public static void main(String[] args) throws SQLException {
 	
 	SqlActive test = new SqlActive();
-	Active action =new Active();
+	ActionMessageTable action =new ActionMessageTable();
 	//test.createActiDetail(action);
 	//test.changeActionName(action);
 	//test.changeActionTxt(action);

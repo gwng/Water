@@ -1,5 +1,6 @@
 package com.team.bean;
 import java.util.Scanner;
+//作者：李健
 //组织信息表
 
 public class Organization {

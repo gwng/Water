@@ -2,10 +2,12 @@ package com.team.bean;
 
 import java.util.Scanner;
 
-//管理者信息表
+
+//作者：钟泽南
+//管理者信息表    
 
 public class ManagerMessageTable {
-	Scanner sc=new Scanner(System.in);
+	Scanner input=new Scanner(System.in);
 	
 	//性别
 	private static enum sex{
@@ -28,48 +30,56 @@ public class ManagerMessageTable {
 	//设置Id方法
 	public void setId() {
 		//输入管理者id
-		int a=sc.nextInt();
+		int a=input.nextInt();
 		id=a;
 	}
 	//设置姓名方法
 	public void setManagerName() {
 		//输入字符串内容
-		String name=sc.next();
+		String name=input.next();
 		managerName=name;
 	}
 	//设置性别方法
 	public void setManagerSex() {
-		sex s=(sex)sc.next();
-		managerSex=s;
+		int choose = 0;				
+		System.out.print("请输入序号以确定您的性别 （1.男性  2.女性） ：");
+		choose = input.nextInt();
+		if (choose == 1)
+			managerSex = sex.boy;
+		else if (choose == 2)
+			managerSex = sex.girl;
+		else {
+			System.out.println("输入错误！请按提示再次输入：");
+			setManagerSex();}
 	}
 	//设置学号
 	public void setManasgerNo() {
-		int a=sc.nextInt();
+		int a=input.nextInt();
 		managerNo=a;
 	}
 	//设置院系
 	public void setCollege() {
-		String s=sc.next();
+		String s=input.next();
 		college=s;
 	}
 	//设置班级专业
 	public void setClassName() {
-		String s=sc.next();
+		String s=input.next();
 		className=s;
 	}
 	//设置电话
 	public void setMobilePhone() {
-		int a=sc.nextInt();
+		int a=input.nextInt();
 		mobilePhone=a;
 	}
 	//设置组织名
 	public void setOrganizationName() {
-		String s=sc.next();
+		String s=input.next();
 		organizationName=s;
 	}
 	//设置职业
 	public void setPosition() {
-		String s=sc.next();
+		String s=input.next();
 		position=s;
 	}
 	

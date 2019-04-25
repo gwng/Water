@@ -1,10 +1,10 @@
 package com.team.bean;
 
 import java.util.Scanner;
-
+//作者：钟泽南
 //通知信息表
 public class InformMessageTable {
-	Scanner sc=new Scanner(System.in);
+	Scanner input=new Scanner(System.in);
 	//信息名
 	private static String message=null;
 	//通知内容
@@ -15,28 +15,28 @@ public class InformMessageTable {
 	private static String organization=null;
 	//设置信息名
 	public void setMessage() {
-		String s=sc.next();
+		String s=input.next();
 		message=s;
 	}
 	//设置通知内容
 	public void setText() {
-		String s=sc.next();
+		String s=input.next();
 		text=s;
 	}
 	//设置时间
 	public void setTime() {
 		String s1,s2,s3,s4,s5,s6;
-		s1=sc.next();
-		s2=sc.next();
-		s3=sc.next();
-		s4=sc.next();
-		s5=sc.next();
-		s6=sc.next();
+		s1=input.next();
+		s2=input.next();
+		s3=input.next();
+		s4=input.next();
+		s5=input.next();
+		s6=input.next();
 		t.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	//设置发布组织
 	public void setOrganization() {
-		String s=sc.next();
+		String s=input.next();
 		organization=s;
 	}
 	

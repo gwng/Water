@@ -1,6 +1,7 @@
 package com.team.bean;
 
 import java.util.Scanner;
+//作者：钟泽南
 //团体报名表
 
 public class TeamApplyTable {
@@ -19,41 +20,41 @@ public class TeamApplyTable {
 	//队员名字
 	private static String teamText=null;
 	
-	Scanner sc=new Scanner(System.in);
+	Scanner input=new Scanner(System.in);
 	
 	//设置序号
 	public void setTeamId() {
-		int i=sc.nextInt();
+		int i=input.nextInt();
 		teamId=i;
 	}
 	//设置队长联系方式
 	public void setTeamTel() {
-		int i=sc.nextInt();
+		int i=input.nextInt();
 		teamTel=i;
 	}
 	//设置队伍人数
 	public void setTeamNum() {
-		int i=sc.nextInt();
+		int i=input.nextInt();
 		teamNum=i;
 	}
 	//设置队长学号
 	public void setTeamNo() {
-		int i=sc.nextInt();
+		int i=input.nextInt();
 		teamNo=i;
 	}
 	//设置队伍名称
 	public void setTeamName() {
-		String s=sc.next();
+		String s=input.next();
 		teamName=s;
 	}
 	//设置队长名字
 	public void setTeamerName() {
-		String s=sc.next();
+		String s=input.next();
 		teamerName=s;
 	}
 	//设置队员姓名
 	public void setTeamText() {
-		String s=sc.next();
+		String s=input.next();
 		teamText=s;
 	}
 	

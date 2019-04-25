@@ -15,143 +15,143 @@ public class SqlManager {
 	static PreparedStatement pSta;//定义预编译语句
 	static ResultSet res;  //返回结果集
 	//创建填写管理者信息表
-	public void createManager(Manager manager) throws SQLException { 
+	public void createManager(ManagerMessageTable ManagerMessageTable) throws SQLException { 
 		System.out.println("请输入管理者性名");
-		manager.setManagerName();
-		manager.setSex();  //管理者性别
+		ManagerMessageTable.setManagerName();
+		ManagerMessageTable.setSex();  //管理者性别
 		System.out.println("请输入管理者学号");
-		manager.setManasgerNo();
+		ManagerMessageTable.setManasgerNo();
 		System.out.println("请输入管理者院系");
-		manager.setCollege();
+		ManagerMessageTable.setCollege();
 		System.out.println("请输入管理者专业");
-		manager.setClassName();
+		ManagerMessageTable.setClassName();
 		System.out.println("请选择管理者电话");
-		manager.setMobilePhone();
+		ManagerMessageTable.setMobilePhone();
 		System.out.println("请输入组织名");
-		manager.setOrganizationName();
+		ManagerMessageTable.setOrganizationName();
 		System.out.println("请输入管理者职位");
-		manager.setPosition();
+		ManagerMessageTable.setPosition();
 		sql = "insert into manage_detail(managerName,sex,managerNo,college,"
 				+ "className,mobliePhone,organizationName,position)values(?,?,?,?,?,?,?,?)";
 		PreparedStatement res = connection.getconnection().prepareStatement(sql);
-		res.setObject(1,manager.getManagerName());
-		res.setObject(2,manager.getSexTest());
-		res.setObject(3,manager.getManagerNo());
-		res.setObject(4,manager.getCollege());
-		res.setObject(5,manager.getClassName());
-		res.setObject(6,manager.getMobilePhone());
-		res.setObject(7,manager.getOrganizationName());
-		res.setObject(8,manager.getPosition());
+		res.setObject(1,ManagerMessageTable.getManagerName());
+		res.setObject(2,ManagerMessageTable.getSex());
+		res.setObject(3,ManagerMessageTable.getManagerNo());
+		res.setObject(4,ManagerMessageTable.getCollege());
+		res.setObject(5,ManagerMessageTable.getClassName());
+		res.setObject(6,ManagerMessageTable.getMobilePhone());
+		res.setObject(7,ManagerMessageTable.getOrganizationName());
+		res.setObject(8,ManagerMessageTable.getPosition());
 		res.execute();
 		System.out.println("提交管理者表成功");
 	}
 	//更改管理者姓名
-	public void changeManagerName(Manager manager) throws SQLException {
+	public void changeManagerName(ManagerMessageTable ManagerMessageTable) throws SQLException {
 		System.out.println("请输入想更改的管理者姓名");
-		manager.setManagerName();
+		ManagerMessageTable.setManagerName();
 		System.out.println("请输入想更改的id序号");
 		String Id = n.next();
 		sql = "update manage_detail set managerName = ?where id = ?";
 		PreparedStatement res = connection.getconnection().prepareStatement(sql);
-		res.setObject(1,manager.getManagerName());
+		res.setObject(1,ManagerMessageTable.getManagerName());
 		//System.out.println(Id);
 		res.setObject(2,Id);//2 是修改id为2 的表字段
 		res.execute();
 		System.out.println("修改管理者姓名成功");
 	}
 	//更改管理者性别
-	public void changeManagerSex(Manager manager) throws SQLException {
+	public void changeManagerSex(ManagerMessageTable ManagerMessageTable) throws SQLException {
 		System.out.println("请输入想更改的管理者姓别");
-		manager.setSex();
+		ManagerMessageTable.setSex();
 		System.out.println("请输入想更改的id序号");
 		String Id = n.next();
 		sql = "update manage_detail set sex = ?where id = ?";
 		PreparedStatement res = connection.getconnection().prepareStatement(sql);
-		res.setObject(1,manager.getSexTest());
+		res.setObject(1,ManagerMessageTable.getSex());
 		//System.out.println(Id);
 		res.setObject(2,Id);//2 是修改id为2 的表字段
 		res.execute();
 		System.out.println("修改管理者姓别成功");
 	}
 	//更改管理者姓名
-		public void changeManagerNo(Manager manager) throws SQLException {
+		public void changeManagerNo(ManagerMessageTable ManagerMessageTable) throws SQLException {
 			System.out.println("请输入想更改的管理者学号");
-			manager.setManasgerNo();
+			ManagerMessageTable.setManasgerNo();
 			System.out.println("请输入想更改的id序号");
 			String Id = n.next();
 			sql = "update manage_detail set managerNo = ?where id = ?";
 			PreparedStatement res = connection.getconnection().prepareStatement(sql);
-			res.setObject(1,manager.getManagerNo());
+			res.setObject(1,ManagerMessageTable.getManagerNo());
 			//System.out.println(Id);
 			res.setObject(2,Id);//2 是修改id为2 的表字段
 			res.execute();
 			System.out.println("修改管理者学号成功");
 		}	
 	//更改管理者院系
-		public void changecollege(Manager manager) throws SQLException {
+		public void changecollege(ManagerMessageTable ManagerMessageTable) throws SQLException {
 			System.out.println("请输入想更改的管理者院系");
-				manager.setClassName();
+				ManagerMessageTable.setClassName();
 				System.out.println("请输入想更改的id序号");
 				String Id = n.next();
 				sql = "update manage_detail set className = ?where id = ?";
 				PreparedStatement res = connection.getconnection().prepareStatement(sql);
-				res.setObject(1,manager.getClassName());
+				res.setObject(1,ManagerMessageTable.getClassName());
 				//System.out.println(Id);
 				res.setObject(2,Id);//2 是修改id为2 的表字段
 				res.execute();
 				System.out.println("修改管理者院系成功");
 				}		
 	//更改管理者专业
-	public void changeclassName(Manager manager) throws SQLException {
+	public void changeclassName(ManagerMessageTable ManagerMessageTable) throws SQLException {
 		System.out.println("请输入想更改的管理者专业");
-			manager.setCollege();
+			ManagerMessageTable.setCollege();
 			System.out.println("请输入想更改的id序号");
 			String Id = n.next();
 			sql = "update manage_detail set college = ?where id = ?";
 			PreparedStatement res = connection.getconnection().prepareStatement(sql);
-			res.setObject(1,manager.getCollege());
+			res.setObject(1,ManagerMessageTable.getCollege());
 	 			//System.out.println(Id);
 				res.setObject(2,Id);//2 是修改id为2 的表字段
 				res.execute();
 				System.out.println("修改管理者专业成功");
 				}		
 	//更改管理者电话
-	public void changeMobliePhone(Manager manager) throws SQLException {
+	public void changeMobliePhone(ManagerMessageTable ManagerMessageTable) throws SQLException {
 		System.out.println("请输入想更改的管理者电话 ");
-			manager.setMobilePhone();
+			ManagerMessageTable.setMobilePhone();
 			System.out.println("请输入想更改的id序号");
 			String Id = n.next();
 			sql = "update manage_detail set mobliePhone = ?where id = ?";
 			PreparedStatement res = connection.getconnection().prepareStatement(sql);
-			res.setObject(1,manager.getMobilePhone());
+			res.setObject(1,ManagerMessageTable.getMobilePhone());
 	 			//System.out.println(Id);
 				res.setObject(2,Id);//2 是修改id为2 的表字段
 				res.execute();
 				System.out.println("修改管理者手机号成功");
 				}		
 	//更改管理组织名
-			public void changeOrganizationName(Manager manager) throws SQLException {
+			public void changeOrganizationName(ManagerMessageTable ManagerMessageTable) throws SQLException {
 				System.out.println("请输入想更改的管理者组织名 ");
-					manager.setOrganizationName();
+					ManagerMessageTable.setOrganizationName();
 					System.out.println("请输入想更改的id序号");
 					String Id = n.next();
 					sql = "update manage_detail set organizationName = ?where id = ?";
 					PreparedStatement res = connection.getconnection().prepareStatement(sql);
-					res.setObject(1,manager.getOrganizationName());
+					res.setObject(1,ManagerMessageTable.getOrganizationName());
 			 		//System.out.println(Id);
 					res.setObject(2,Id);//2 是修改id为2 的表字段
 					res.execute();
 					System.out.println("修改管理组织成功");
 					}		
 			//更改管理组织名
-			public void changePosition(Manager manager) throws SQLException {
+			public void changePosition(ManagerMessageTable ManagerMessageTable) throws SQLException {
 				System.out.println("请输入想更改的管理者职位 ");
-					manager.setPosition();
+					ManagerMessageTable.setPosition();
 					System.out.println("请输入想更改的id序号");
 					String Id = n.next();
 					sql = "update manage_detail set position = ?where id = ?";
 					PreparedStatement res = connection.getconnection().prepareStatement(sql);
-					res.setObject(1,manager.getPosition());
+					res.setObject(1,ManagerMessageTable.getPosition());
 			 		//System.out.println(Id);
 					res.setObject(2,Id);//2 是修改id为2 的表字段
 					res.execute();
@@ -210,16 +210,16 @@ public class SqlManager {
 		}
 	public static void main(String[] args) throws SQLException {
 	SqlManager test = new SqlManager();
-	Manager manager = new Manager();
-	//test.createManager(manager);
-	//test.changeManagerName(manager);
-	//test.changeManagerSex(manager);
-	//test.changeManagerNo(manager);
-	//test.changecollege(manager);
-	//test.changeclassName(manager);
-	//test.changeMobliePhone(manager);
-	//test.changeOrganizationName(manager);
-	//test.changePosition(manager);
+	ManagerMessageTable ManagerMessageTable = new ManagerMessageTable();
+	//test.createManager(ManagerMessageTable);
+	//test.changeManagerName(ManagerMessageTable);
+	//test.changeManagerSex(ManagerMessageTable);
+	//test.changeManagerNo(ManagerMessageTable);
+	//test.changecollege(ManagerMessageTable);
+	//test.changeclassName(ManagerMessageTable);
+	//test.changeMobliePhone(ManagerMessageTable);
+	//test.changeOrganizationName(ManagerMessageTable);
+	//test.changePosition(ManagerMessageTable);
 	//test.selectManager();
 	test.deleteManager();
 	}

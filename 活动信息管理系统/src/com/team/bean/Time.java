@@ -1,4 +1,5 @@
 package com.team.bean;
+//作者：钟泽南
 //创建时间类
 public class Time {
 

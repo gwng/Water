@@ -1,5 +1,6 @@
 package com.team.bean;
 import java.util.Scanner;
+//作者：李健
 //个人报名表
 
 public class SelfSignUp {

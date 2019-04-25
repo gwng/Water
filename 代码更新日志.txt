@@ -1,20 +1,44 @@
 2019/4/12  15:23
-把前端代码中的private函数更正为public 
+1.把前端代码中的private函数更正为public 
 				———李健
 2019/4/12  15:33
-把建库代码中各表枚举性别变量更改为 boy girl
+1.把建库代码中各表枚举性别变量更改为 boy girl
 				——李健
 undefined
 2019/4/23 21:48
-更改了个别的类名 	active->ActionMessageTable
+1.更改了个别的类名 	active->ActionMessageTable
 	        	message->InformMessageTable
 		Manager->ManagerMessageTable
 		Team->TeamApplayTable  
 				——钟泽南  
 2019/4/23 22:06
-上传黄梓涛的
+1.上传
 connection.java 
 SqlActive.java 
 SqlManager.java
 SqlMessage.java
 sql操作（已更名为数据库函数操作手册）  ——李健
+
+2019/4/25 14:46
+1.将    connection.java 
+	SqlActive.java 
+	SqlManager.java
+	SqlMessage.java 
+  文件中的类名按以下规则修改
+	active->ActionMessageTable
+	message->InformMessageTable
+	Manager->ManagerMessageTable
+	Team->TeamApplayTable 
+ 
+2.将	ActionMessageTable.java 
+	InformMessageTable.java 
+	ManagerMessageTable.java 
+	TeamApplayTable.java  
+  文件中的Scanner sc=new Scanner(System.in);
+   修改为Scanner input=new Scanner(System.in);
+
+3.修改了ManagerMessageTable.java的setManagerSex()函数
+  修改了ActionMessageTable.java的setActionStatus()函数
+
+4.在com.team.bean内所有java文件头部注释加入原作者名字				
+					——李健	

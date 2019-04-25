@@ -1,5 +1,6 @@
 package com.team.bean;
 import java.util.Scanner;
+//作者：李健
 // 账号信息表
 
 public class User {					//User类用于储存、传递、检验用户输入的数据

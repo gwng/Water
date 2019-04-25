@@ -1,5 +1,6 @@
 package com.team.bean;
 import java.util.Scanner;
+//作者：李健
 //用户信息表
 //获取用户及储存用户
 public class UserMessage {

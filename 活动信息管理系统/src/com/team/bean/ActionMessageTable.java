@@ -1,10 +1,13 @@
 package com.team.bean;
-//活动信息表
+//作者：钟泽南
+//活动信息表  
 import java.util.Scanner;
 
 
+
+
 public class ActionMessageTable {
-	Scanner sc=new Scanner(System.in);
+	Scanner input=new Scanner(System.in);
 	//状态枚举
 	private static enum status{
 		not_push,in,out_of_date,undefined
@@ -62,60 +65,70 @@ public class ActionMessageTable {
 	
 	//设置活动名
 	public void setActionName() {
-		String s=sc.next();
+		String s=input.next();
 		actionName=s;
 	}
 	//设置活动内容
 	public void setActionTxt() {
-		String s=sc.next();
+		String s=input.next();
 		actionTxt=s;
 	}
 	//设置活动类型
 	public void setActionClass() {
-		String s=sc.next();
+		String s=input.next();
 		actionClass=s;
 	}
 	//设置活动发布时间
 	public void setPushTime() {
 		String s1,s2,s3,s4,s5,s6;
-		s1=sc.next();
-		s2=sc.next();
-		s3=sc.next();
-		s4=sc.next();
-		s5=sc.next();
-		s6=sc.next();
+		s1=input.next();
+		s2=input.next();
+		s3=input.next();
+		s4=input.next();
+		s5=input.next();
+		s6=input.next();
 		pushTime.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	//设置活动状态
 	public void setActionStatus() {
-		String s=sc.next();
-		actionStatus=(status)s;
+		int choose = 0;				
+		System.out.print("请输入序号来选择活动状态 （1.尚未开始  2.进行中 3.活动结束） ：");
+		choose = input.nextInt();
+		if (choose == 1)
+			actionStatus = status.not_push;
+		else if (choose == 2)
+			actionStatus = status.in;
+		else if (choose == 3)
+			actionStatus = status.out_of_date;
+		else {
+			System.out.println("输入错误！请按提示再次输入：");
+			setActionStatus();}
 	}
 	//设置活动归属组织
 	public void setActionOrganization() {
-		String s=sc.next();
+		String s=input.next();
 		actionOrganization=s;
 	}
 	//设置活动截止时间
 	public void setStopTime() {
 		String s1,s2,s3,s4,s5,s6;
-		s1=sc.next();
-		s2=sc.next();
-		s3=sc.next();
-		s4=sc.next();
-		s5=sc.next();
-		s6=sc.next();
+		s1=input.next();
+		s2=input.next();
+		s3=input.next();
+		s4=input.next();
+		s5=input.next();
+		s6=input.next();
 		stopTime.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	//设置活动报名时间
 	public void setBeginTime() {
 		String s1,s2,s3,s4,s5,s6;
-		s1=sc.next();
-		s2=sc.next();
-		s3=sc.next();
-		s4=sc.next();
-		s5=sc.next();
-		s6=sc.next();
+		s1=input.next();
+		s2=input.next();
+		s3=input.next();
+		s4=input.next();
+		s5=input.next();
+		s6=input.next();
 		beginTime.setTime(s1, s2, s3, s4, s5, s6);
 	}
 	
