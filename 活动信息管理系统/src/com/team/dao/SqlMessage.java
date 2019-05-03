@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-import com.team.bean.Active;
+import com.team.bean.ActionMessageTable;
 import com.team.bean.InformMessageTable;
 
 public class SqlMessage {

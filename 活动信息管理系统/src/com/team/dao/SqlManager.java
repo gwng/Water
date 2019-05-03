@@ -18,7 +18,7 @@ public class SqlManager {
 	public void createManager(ManagerMessageTable ManagerMessageTable) throws SQLException { 
 		System.out.println("请输入管理者性名");
 		ManagerMessageTable.setManagerName();
-		ManagerMessageTable.setSex();  //管理者性别
+		ManagerMessageTable.setManagerSex();  //管理者性别
 		System.out.println("请输入管理者学号");
 		ManagerMessageTable.setManasgerNo();
 		System.out.println("请输入管理者院系");
@@ -62,7 +62,7 @@ public class SqlManager {
 	//更改管理者性别
 	public void changeManagerSex(ManagerMessageTable ManagerMessageTable) throws SQLException {
 		System.out.println("请输入想更改的管理者姓别");
-		ManagerMessageTable.setSex();
+		ManagerMessageTable.setManagerSex();
 		System.out.println("请输入想更改的id序号");
 		String Id = n.next();
 		sql = "update manage_detail set sex = ?where id = ?";

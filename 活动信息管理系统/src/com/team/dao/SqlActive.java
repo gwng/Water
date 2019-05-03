@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import com.mysql.jdbc.Statement;
+//import com.mysql.jdbc.Statement;
 import com.team.bean.*;
 
 public class SqlActive {

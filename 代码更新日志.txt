@@ -42,3 +42,7 @@ sql操作（已更名为数据库函数操作手册）  ——李健
 
 4.在com.team.bean内所有java文件头部注释加入原作者名字				
 					——李健	
+
+2019/5/3
+1.在com.team.dao中增加SqlOrganization.java文件
+					——李健	
